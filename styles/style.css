@@ -1,0 +1,132 @@
+:root{
+  --violet: #8E7BEF;
+  --black: #222222;
+  --black-bg: rgba(20, 20, 20, 0.5) ;
+  --white: rgba(255, 255, 255, 0.5) ;
+  --azul: rgba(60, 178, 251, 0.2) ;
+  /*  font-family: 'Inter', sans-serif;*/
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+} 
+
+html {
+  font-size: 62.5%; 
+  box-sizing: border-box;
+}
+
+body{ 
+  font-size: 16px;
+  background-image: url("../imgs/img29.jpg");
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  margin-left: 5%;
+  margin-right: 5%;
+  /*margin-top: 5%;*/
+
+}
+
+header {
+
+  text-align: center;
+  font-size: large;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around ;
+  height: 1200px;
+  /*background-color: blue;*/
+}
+
+#container-glass{
+  width: 900px;
+  height: 900px;
+  display: flex; /*Debí colocar flex para poder centrar*/
+  justify-content: center;  /*Lo centró horizontalmente*/
+  align-items: center; /*Lo centró verticalmente*/
+}
+
+#glass{ /*Este es el objeto que voy a manipular*/
+  width: 400px;
+  height: 400px;
+  background-color: var(--white);
+  border-radius: 25%;
+  backdrop-filter: blur(0px) contrast(100%) saturate(100%);
+}
+
+#board{
+  width: 30%;
+  font-size: 2.5rem;
+  height: 900px;
+  border-radius: 1rem;
+  background-color: var(--azul) ;
+  padding: 0 2rem; 
+  border: 1px solid  white;  /*OJO QUITARLO*/
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 80px;
+   
+}
+
+
+#board h3{
+  grid-column: span 2; /*Item 1*/
+  /*grid-row: span 2;*/
+  height: 11rem;
+  text-align: center;
+}
+
+#board #code{
+  grid-column: span 2; /*Item */
+  grid-row: span 3;
+  height: 180px;
+}
+
+/*div{
+   border: 1px solid white;  
+}/*OJO QUITARLO*/
+
+.label{ 
+   background-color: aqua;
+}
+
+#code{
+  background-color: white;
+  height: 250px;
+  border-radius: 0.5rem;
+  height: max-content;
+  font-size: 2rem;
+}
+
+
+
+.container-btn
+{ grid-column: span 2; /*Item */
+  border: none;
+}
+
+
+.centrado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 0 2rem;
+  align-content: center; 
+}
+
+footer {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
